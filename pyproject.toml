@@ -1,0 +1,19 @@
+[project]
+name = "learn-langchain"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Prakash Mani",email = "m.praki@gmail.com"},
+    {name = "Subin C",email = "subin.c@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13.5,<4.0"
+dependencies = [
+    "python-dotenv",
+    "langchain[google-genai]==0.3.25"
+]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
