@@ -3,12 +3,13 @@ from logging import basicConfig, error
 
 from dotenv import load_dotenv
 
-from src.learn_langchain import PromptTemplate
+from src.learn_langchain import PromptTemplate, OutputParser
 
 
 def main():
     load_dotenv(verbose=True)
     PromptTemplate().learn()
+    OutputParser().learn()
 
 
 def configure_logging():
