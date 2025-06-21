@@ -1,9 +1,10 @@
 from logging import info
 
-from langchain.chat_models import init_chat_model
 from langchain.output_parsers import ResponseSchema
 from langchain.output_parsers import StructuredOutputParser
 from langchain_core.prompts import ChatPromptTemplate
+
+from src.learn_langchain.model import Model
 
 
 class OutputParser:
@@ -32,8 +33,7 @@ class OutputParser:
 
         info(formatted_prompt)
 
-        model = init_chat_model(model="gemini-2.5-flash", model_provider="google_genai")
-        response = model.invoke(formatted_prompt)
+        response = Model().invoke(formatted_prompt)
         json_output = parser.parse(response.content)
 
         info(json_output)
