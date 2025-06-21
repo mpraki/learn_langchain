@@ -3,7 +3,7 @@ from logging import basicConfig, error, info
 
 from dotenv import load_dotenv
 
-from src.learn_langchain import PromptTemplate, OutputParser
+from src.learn_langchain import PromptTemplate, OutputParser, Memory
 
 
 def main():
@@ -14,6 +14,9 @@ def main():
 
     info("******* Output Parser *******")
     OutputParser().learn()
+
+    info("******* Conversation Chain / Memory *******")
+    Memory().learn()
 
 
 def configure_logging():

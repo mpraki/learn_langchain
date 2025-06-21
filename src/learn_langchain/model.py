@@ -13,5 +13,8 @@ class Model:
         model_provider = os.getenv("MODEL_PROVIDER")
         self.model = init_chat_model(model=model_name, model_provider=model_provider)
 
+    def getModel(self):
+        return self.model
+
     def invoke(self, prompt):
         return self.model.invoke(prompt)
