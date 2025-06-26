@@ -10,7 +10,8 @@ readme = "README.md"
 requires-python = ">=3.13.5,<4.0"
 dependencies = [
     "python-dotenv",
-    "langchain[google-genai]==0.3.25"
+    "langchain[google-genai]==0.3.25",
+    "google-genai"
 ]
 
 

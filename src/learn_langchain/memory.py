@@ -10,7 +10,7 @@ from src.learn_langchain.model import Model
 class Memory:
 
     def learn(self):
-        model = Model().getModel()
+        model = Model().get_model()
 
         info("\n ***** Buffer Memory *****")
 
